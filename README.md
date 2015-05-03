@@ -16,10 +16,6 @@ If you don't care about Go and just want to build the thing:
     cd avanza-nav-retriever
     go build
 
-If you prefer to just grab a pre-built binary:
-
-http://gobuild.io/github.com/jsageryd/avanza-nav-retriever
-
 ## Usage example
 Fetch the latest price for Avanza Zero and store it in `$HOME/foo/`
 

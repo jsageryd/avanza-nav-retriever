@@ -4,12 +4,13 @@ import (
 	"bufio"
 	"flag"
 	"fmt"
-	"golang.org/x/net/html"
 	"log"
 	"net/http"
 	"os"
 	"os/exec"
 	"strings"
+
+	"golang.org/x/net/html"
 )
 
 var (

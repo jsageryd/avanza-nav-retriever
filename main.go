@@ -90,20 +90,28 @@ func addPrice(price price, file *os.File) {
 
 	cmd = exec.Command("git", "init")
 	cmd.Dir = repo
-	cmd.Run()
+	if err := cmd.Run(); err != nil {
+		log.Fatalf("git init: %v", err)
+	}
 
 	cmd = exec.Command("git", "add", pricedb)
 	cmd.Dir = repo
-	cmd.Run()
+	if err := cmd.Run(); err != nil {
+		log.Fatalf("git add: %v", err)
+	}
 
 	commitMessage := fmt.Sprintf("Update %s", price.date)
 	cmd = exec.Command("git", "commit", "-m", commitMessage)
 	cmd.Dir = repo
-	cmd.Run()
+	if err := cmd.Run(); err != nil {
+		log.Fatalf("git commit: %v", err)
+	}
 
 	cmd = exec.Command("git", "push")
 	cmd.Dir = repo
-	cmd.Run()
+	if err := cmd.Run(); err != nil {
+		log.Fatalf("git push: %v", err)
+	}
 }
 
 func ourPrice(file *os.File) price {

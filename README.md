@@ -6,15 +6,9 @@ to a ledger-compatible price-db file, then commits and pushes the update.
 This is a rewrite of https://github.com/jsageryd/avanza_zero_nav_retriever.
 
 ## Installation
-If you have $GOPATH set:
-
-    go get github.com/jsageryd/avanza-nav-retriever
-
-If you don't care about Go and just want to build the thing:
-
-    git clone https://github.com/jsageryd/avanza-nav-retriever.git
-    cd avanza-nav-retriever
-    go build
+```
+go install github.com/jsageryd/avanza-nav-retriever@latest
+```
 
 ## Usage example
 Fetch the latest price for Avanza Zero and store it in `$HOME/foo/`
